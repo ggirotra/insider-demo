@@ -1,0 +1,59 @@
+<style>  
+    .container{
+        margin: 15px;
+        height:60px;
+        padding: 15px;
+        border:1px solid #393939;
+    }
+    .main-section{
+        margin-left: 150px; 
+        font-size: 22px;
+        width:50%; 
+        padding: 50px 10px 2px 120px;
+    }
+    .ques-section{
+        margin-left: 180px; 
+        font-size: 20px;
+        width:50%; 
+        padding: 40px 10px 2px 80px;
+        color: rgb(64, 64, 64); 
+        background-color: rgb(255, 255, 255); 
+        outline: rgb(0, 0, 0) solid 0px;
+    }
+    
+    .matradio ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: blue !important;
+    }
+
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle , .mat-radio-outer-circle {
+        border-color: blue !important;
+    }
+
+    .matradio ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle{
+        background-color: blue !important;
+    }
+</style>   
+<div class="ques-section">
+    Specifically, which Cisco products do you use? (e.g., ACI, Webex, SD-WAN) List as many as you can. The more details you provide, the better we can match you with research opportunities.
+</div>
+
+<div class="main-section">
+    <div class="flex-container" fxLayout="row" width=200px;>
+            <mat-form-field class="example-full-width" style="width:700px;">
+                <input matInput placeholder="Enter Text here" value="" required>
+            </mat-form-field>
+    </div>
+
+    <div class="flex-container" fxLayout="row" fxLayoutAlign="end" style="margin-top:50px;">
+        <span>
+            <button mat-raised-button color="primary" (click)="onClicknext()" style="height: 60px;
+            width:120px;">Next >></button>   
+        </span>     
+    </div>
+
+    <div class="flex-container" fxLayout="row" style="margin-top: 70px;">
+        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    </div>
+</div>
+
+

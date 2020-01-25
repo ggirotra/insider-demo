@@ -1,0 +1,116 @@
+
+<style>  
+        .container{
+            margin: 15px;
+            height:60px;
+            padding: 15px;
+            border-radius: 4px;
+            background: 0 0;
+            color: #393939;
+            font-weight: 400;
+            font-size: 16px;
+            border: 2px solid rgba(0,0,0,.2);
+            border-color: #9f9f9f;
+            transition: all .3s ease-in;
+            min-height: 62px;
+        }
+        .main-section{
+            margin-left: 150px; 
+            font-size: 22px;
+            width:50%; 
+            padding: 5px 10px 2px 80px;
+        }
+        .box-size {
+            width: 200px;
+            height:90px;
+        }
+</style>
+
+<div class="main-section"
+  gdAreas="side content new"
+  gdRows="40px 40px 40px"
+  gdAreas.lt-md="side | content | new"
+  gdRows.lt-md="auto auto auto auto"
+  >
+    <div class="container flex-container box-size" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
+        <span style="width: 140px">Networking</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="networking" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+	</div>
+	<div class="container flex-container box-size" fxLayout="row" gdArea="content" fxLayoutAlign="space-between center">
+        <span style="width: 140px">Collaboration</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="collaboration" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+    </div>
+    <div class="container flex-container box-size"  fxLayout="row" gdArea="new" fxLayoutAlign="space-between center">
+        <span style="width: 140px">Internet of things</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="iot" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+    </div> 
+</div>
+
+<div class="main-section"
+  gdAreas="side content new"
+  gdColumns="auto auto auto"
+  gdRows="40px 40px 40px"
+  gdAreas.lt-md="side | content | new"
+  gdRows.lt-md="auto auto auto auto"
+  >
+    <div class="container box-size flex-container" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
+        <span>Mobility & Wireless</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="mobility" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+    </div> 
+    <div class="container box-size flex-container" fxLayout="row" gdArea="content" fxLayoutAlign="space-between center">
+        <span>Cloud</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="cloud" labelPosition="before" color="primary"  ng-value="partner"></mat-radio-button>
+        </span>
+    </div>  
+    <div class="container box-size flex-container" fxLayout="row" gdArea="new" fxLayoutAlign="space-between center">
+        <span>Services (e.g., TAC, Professional Services, Cisco Managed Services)</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="services" labelPosition="before" color="primary"  ng-value="partner"></mat-radio-button>
+        </span>
+    </div> 
+</div>
+
+<div class="main-section"
+  gdAreas="side content new"
+  gdColumns="auto auto auto"
+  gdRows="40px 40px 40px"
+  gdAreas.lt-md="side | content | new"
+  gdRows.lt-md="auto auto auto auto"
+  >
+    <div class="container box-size flex-container" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
+        <span>Security</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="security" labelPosition="before" color="primary" ng-value="partner"></mat-radio-button>
+        </span>
+    </div> 
+    <div class="container box-size flex-container" fxLayout="row" gdArea="content" fxLayoutAlign="space-between center">
+        <span>Analytics</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="analytics" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+    </div>  
+    <div class="container box-size flex-container" fxLayout="row" gdArea="new" fxLayoutAlign="space-between center">
+        <span>Data center</span>
+        <span class="matradio"> 
+            <mat-radio-button ng-model="datacenter" color="primary" labelPosition="before" ng-value="partner"></mat-radio-button>
+        </span>
+    </div> 
+</div>
+
+<div class="flex-container" fxLayout="row" fxLayoutAlign="end" style="margin-left: 200px; margin-top:30px; width: 50%">
+    <button mat-raised-button color="primary" (click)="onClicknext('type')" style="height: 60px;
+    width:120px;">Next >></button>     
+</div>
+
+<div class="flex-container" fxLayout="row" style="margin-top: 30px; margin-left: 250px; width: 50%">
+    <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+</div>
