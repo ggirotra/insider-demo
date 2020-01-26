@@ -2,3 +2,101 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btn-style {
+    border-radius: 4px;
+    background: #007ac0;
+    width: 150px;
+    font-size: 24px;
+    font-weight: 400;
+    min-height: 62px;
+    padding: 10px 20px;
+    height:60px;
+}
+
+.btn-back-style {
+    height:60px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    width:150px;
+    padding: 10px 20px;
+    color:#fff;
+    background:#6c6c6c;
+}
+
+.question-section {
+    font-size: 20px;
+    padding: 0;
+    font-weight: 400;
+    color: #393939;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    color: #fff;
+    background: #007ac0 !important;
+}
+
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element {
+    background:  #007ac0 !important;
+}
+
+.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #007ac0 !important;
+}
+
+.mat-radio-button.mat-primary .mat-radio-inner-circle, .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
+    background: #007ac0 !important;
+}
+
+.main-section{
+    margin: 60px 0 0 200px; 
+    font-size: 22px;
+    width:50%; 
+    padding: 5px 10px 2px 80px;
+}
+
+.main-section-grid{
+    margin-left: 150px; 
+    font-size: 22px;
+    width:50%; 
+    padding: 5px 10px 2px 80px;
+}
+
+.box-size {
+    width: 200px;
+    height:90px;
+}
+
+.main-form {
+    margin-left: 150px; 
+}
+
+.ques-section{
+    margin-left: 180px; 
+    font-size: 20px;
+    width:50%; 
+    padding: 40px 10px 2px 80px;
+    color: rgb(64, 64, 64); 
+    background-color: rgb(255, 255, 255); 
+    outline: rgb(0, 0, 0) solid 0px;
+}
+
+.container{
+    margin: 15px;
+    height:60px;
+    padding: 15px;
+    border-radius: 4px;
+    background: 0 0;
+    color: #393939;
+    font-weight: 400;
+    font-size: 16px;
+    border: 2px solid rgba(0,0,0,.2);
+    border-color: #9f9f9f;
+    transition: all .3s ease-in;
+    min-height: 62px;
+}
+
