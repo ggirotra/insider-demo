@@ -13,36 +13,18 @@
         transition: all .3s ease-in;
         min-height: 62px;
     }
-    .main-section{
-        margin-left: 150px; 
-        font-size: 22px;
-        width:50%; 
-        padding: 5px 10px 2px 80px;
-    }
-    .ques-section{
-        margin-left: 180px; 
-        font-size: 20px;
-        width:50%; 
-        padding: 40px 10px 2px 80px;
-        color: rgb(64, 64, 64); 
-        background-color: rgb(255, 255, 255); 
-        outline: rgb(0, 0, 0) solid 0px;
-    }
-    .box-size {
-        width: 200px;
-        height:90px;
-    }
+
 </style>
 <div class="ques-section" >
      In addition to Cisco, what companies does your organization consider, use, sell, or support?
 </div>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
-  gdRows="40px 40px 40px"
+  gdRows="auto auto auto"
+  gdColumns="auto auto auto"
   gdAreas.lt-md="side | content | new"
-  gdRows.lt-md="auto auto auto auto"
-  >
+  gdRows.lt-md="auto auto auto auto">
     <div class="container flex-container box-size" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
         <span style="width: 140px">Aruba</span>
         <span class="matradio"> 
@@ -63,13 +45,12 @@
     </div> 
 </div>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
   gdColumns="auto auto auto"
-  gdRows="40px 40px 40px"
+  gdRows="auto auto auto"
   gdAreas.lt-md="side | content | new"
-  gdRows.lt-md="auto auto auto auto"
-  >
+  gdRows.lt-md="auto auto auto auto">
     <div class="container box-size flex-container" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
         <span>Avaya</span>
         <span class="matradio"> 
@@ -90,13 +71,12 @@
     </div> 
 </div>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
   gdColumns="auto auto auto"
-  gdRows="40px 40px 40px"
+  gdRows="auto auto auto"
   gdAreas.lt-md="side | content | new"
-  gdRows.lt-md="auto auto auto auto"
-  >
+  gdRows.lt-md="auto auto auto auto">
     <div class="container box-size flex-container" fxLayout="row" gdArea="side" fxLayoutAlign="space-between center">
         <span>Dell</span>
         <span class="matradio"> 
@@ -119,12 +99,10 @@
 
 <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-left: 200px; margin-top:30px; width: 50%">
     <span style="width: 300px; margin-left: 130px;"> 
-            <button mat-raised-button (click)="onClickPrev()" 
-            style="height:60px; width:120px;color: #fff;background: #6c6c6c;">	&lt;&lt; Back</button>     
+        <button mat-raised-button (click)="onClickPrev()" class="btn-back-style">	&lt;&lt; Back</button>     
     </span>
     <span>
-        <button mat-raised-button color="primary" (click)="onClicknext()" style="height: 60px;
-        width:120px;">Submit &gt;&gt;</button>   
+        <button mat-raised-button color="primary" (click)="onClicknext()" class="btn-style">Submit &gt;&gt;</button>   
     </span>    
 </div>
 

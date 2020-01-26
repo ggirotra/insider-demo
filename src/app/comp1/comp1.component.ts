@@ -27,7 +27,7 @@ export class Comp1Component  {
   }
 
   onClickPrev(){
-    this.router.navigate(['/four'], {});
+    this.router.navigate(['/about'], {});
   }
 
 }

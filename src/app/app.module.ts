@@ -14,6 +14,7 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Comp5Component } from './comp5/comp5.component';
 import { Comp6Component } from './comp6/comp6.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Comp6Component } from './comp6/comp6.component';
     Comp3Component,
     Comp4Component,
     Comp5Component,
-    Comp6Component
+    Comp6Component,
+    AboutComponent
   ],
   imports: [
     FlexLayoutModule,

@@ -1,0 +1,41 @@
+
+    <div class="main-section">
+        <legend><div class="question-section">
+            <span style="font-size:37px;">
+                <span style="font-family:arial,helvetica,sans-serif;">
+                    <span style="color: rgb(102, 102, 102);">Become a Cisco Insider</span>
+                </span>
+             </span>
+            <div>&nbsp;</div>  
+            <div><span style="font-family:arial,helvetica,sans-serif;">
+                Would you like to become a Cisco Insider? If so, complete your profile now. It should only take 1-2 minutes.&nbsp;
+            </span></div>
+        </div></legend>
+        <div class="container flex-container" fxLayout="row">
+            <span style="width: 800px">Yes, let's get started</span>
+            <span class="matradio"> <mat-radio-button ng-model="customer" color="primary" ng-value="customer"></mat-radio-button></span>
+        </div>
+        
+        <div class="container flex-container" fxLayout="row">
+            <span style="width: 800px">Not right now</span>
+            <span class="matradio"> <mat-radio-button ng-model="partner" color="primary" ng-value="partner"></mat-radio-button></span>
+        </div> 
+    
+        <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
+            <span style="width: 300px; margin-left: 130px;"> 
+                <button mat-raised-button disabled (click)="onClickPrev()" 
+                class="btn-back-style">&lt;&lt; Back</button>     
+            </span>
+                <span>
+                <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext()">
+                    Next &gt;&gt;
+                </button>   
+                </span>     
+        </div>
+    
+        <div class="flex-container" fxLayout="row" style="margin-top: 70px;">
+            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+        </div>
+    </div>
+    
+    

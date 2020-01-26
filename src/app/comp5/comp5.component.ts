@@ -17,7 +17,7 @@ export class Comp5Component {
 
   onClicknext() {
     //  console.log(type);
-      this.router.navigate(['/five'], {});
+      this.router.navigate(['/six'], {});
   }
   onClickPrev(){
     this.router.navigate(['/four'], {});

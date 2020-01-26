@@ -1,53 +1,48 @@
-<style>
-     .matbutton ::ng-deep .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
-        background-color: #673ab7;
-     } 
-
-     .main-form {
-         margin-left: 150px; 
-     }
-
-</style>
 <div class="main-form" style="width:60%; padding: 50px 10px 2px 120px;">
-        <form fxLayout="column" [formGroup]="contactForm">
-                About You:
-            <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
-                <mat-form-field fxFlex>
-                <input matInput type="text" placeholder="FIRSTNAME" formControlName="firstName">
-                </mat-form-field>
-            </div>
-
-            <div class="input-row">
-                <mat-form-field fxFlex>
-                <input matInput type="text" placeholder="LASTNAME" formControlName="lastName">
-                </mat-form-field>
-            </div>
-        
-            <div class="input-row">
-                <mat-form-field fxFlex>
-                <input matInput  type="text" placeholder="EMAIL" formControlName="email">
-                </mat-form-field>
-            </div>
-
-            <div class="input-row">
-                <mat-form-field fxFlex>
-                <input matInput  type="text" placeholder="COMPANY" formControlName="company">
-                </mat-form-field>
-            </div>
-        </form>
-
-        <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
-            <span style="width: 300px; margin-left: 130px;"> 
-                <button mat-raised-button disabled (click)="onClickPrev()" 
-                style="height: 60px; width:120px;">	&lt;&lt; Back</button>     
-            </span>
-             <span>
-                <button mat-raised-button color="primary" (click)="onClicknext('type')" style="height: 60px;
-                width:120px;">Next >></button>   
-             </span>     
+    <form fxLayout="column" [formGroup]="contactForm">
+            About You:
+        <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+            <mat-form-field fxFlex>
+            <input matInput type="text" placeholder="FIRSTNAME" formControlName="firstName">
+            </mat-form-field>
         </div>
 
-        <div class="input-row" style="margin-top: 70px;">
-            <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+        <div class="input-row">
+            <mat-form-field fxFlex>
+            <input matInput type="text" placeholder="LASTNAME" formControlName="lastName">
+            </mat-form-field>
         </div>
+    
+        <div class="input-row">
+            <mat-form-field fxFlex>
+            <input matInput  type="text" placeholder="EMAIL" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="input-row">
+            <mat-form-field fxFlex>
+            <input matInput  type="text" placeholder="COMPANY" formControlName="company">
+            </mat-form-field>
+        </div>
+    </form>
+
+    <div style="margin: 30px 0 10px 0;">
+
+    <legend> <div class="question-section"><div>
+        <span style="font-family: arial, helvetica, sans-serif;">By entering your information you agree to be contacted regarding Cisco Insider and acknowledge the <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html">Cisco Privacy Statement</a>.&nbsp;</span>
+        </div></div>
+    </legend>
+
+    <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
+        <span style="width: 300px; margin-left: 130px;"> 
+            <button mat-raised-button (click)="onClickPrev()" class="btn-back-style">	&lt;&lt; Back</button>     
+        </span>
+            <span>
+            <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext('type')">Next >></button>   
+            </span>     
     </div>
+
+    <div class="input-row" style="margin-top: 70px;">
+        <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
+    </div>
+</div>

@@ -25,7 +25,7 @@ export class Comp2Component {
   }
 
   onClickPrev(){
-    this.router.navigate(['/two'], {});
+    this.router.navigate(['/one'], {});
   }
 
 }

@@ -14,21 +14,16 @@
             transition: all .3s ease-in;
             min-height: 62px;
         }
-        .main-section{
-            margin-left: 150px; 
-            font-size: 22px;
-            width:50%; 
-            padding: 5px 10px 2px 80px;
-        }
+
         .box-size {
             width: 200px;
             height:90px;
         }
 </style>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
-  gdRows="40px 40px 40px"
+  gdRows="auto auto auto"
   gdAreas.lt-md="side | content | new"
   gdRows.lt-md="auto auto auto auto"
   >
@@ -52,10 +47,10 @@
     </div> 
 </div>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
   gdColumns="auto auto auto"
-  gdRows="40px 40px 40px"
+  gdRows="4auto auto auto"
   gdAreas.lt-md="side | content | new"
   gdRows.lt-md="auto auto auto auto"
   >
@@ -79,10 +74,10 @@
     </div> 
 </div>
 
-<div class="main-section"
+<div class="main-section-grid"
   gdAreas="side content new"
   gdColumns="auto auto auto"
-  gdRows="40px 40px 40px"
+  gdRows="auto auto auto"
   gdAreas.lt-md="side | content | new"
   gdRows.lt-md="auto auto auto auto"
   >
@@ -106,11 +101,10 @@
     </div> 
 </div>
 
-<div class="flex-container" fxLayout="row" fxLayoutAlign="end" style="margin-left: 200px; margin-top:30px; width: 50%">
-    <button mat-raised-button color="primary" (click)="onClicknext('type')" style="height: 60px;
-    width:120px;">Next >></button>     
+<div class="flex-container" fxLayout="row" fxLayoutAlign="end" style="margin-left: 200px; margin-top:30px; width:50%">
+    <button mat-raised-button color="primary" (click)="onClicknext('type')" class="btn-style" >Next >></button>     
 </div>
 
-<div class="flex-container" fxLayout="row" style="margin-top: 30px; margin-left: 250px; width: 50%">
-    <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+<div class="flex-container" fxLayout="row" style="margin-top: 30px; margin-left: 250px; width:50%">
+    <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
 </div>

@@ -16,7 +16,6 @@ export class Comp3Component  {
   }
 
   onClicknext(type) {
-      debugger;
       console.log(type);
       this.router.navigate(['/four'], {});
   }
