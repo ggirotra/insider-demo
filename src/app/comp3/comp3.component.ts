@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styles: []
 })
 export class Comp3Component  {
-
+progress = 40;
   boxForm : FormGroup;
   constructor( private router: Router, private fb: FormBuilder ) {  
     this.boxForm = fb.group({

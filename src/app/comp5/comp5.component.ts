@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class Comp5Component {
 
   checkForm : FormGroup;
+  progress = 80;
   constructor( private router: Router, private fb: FormBuilder ) {  
     this.checkForm = fb.group({
     });

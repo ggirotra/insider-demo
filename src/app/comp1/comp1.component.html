@@ -1,5 +1,24 @@
-
-<div class="main-form" style="width:60%; padding: 50px 10px 2px 120px;">
+<style> 
+    ::ng-deep .mat-progress-bar-fill::after {
+        background-color: #007ac0 !important;
+    }
+    
+    ::ng-deep .mat-progress-bar-buffer {
+        background: #E4E8EB;
+    }
+    
+    ::ng-deep .mat-progress-bar {
+        border-radius: 2px;
+    }
+    .progress-section {
+        font-weight: 600;
+        padding-top: 5px;
+        color: #007ac0;
+        font-size:small;
+    }
+    
+ </style>
+<div class="main-form" style="width:60%; padding: 20px 10px 0px 120px;">
         <form #myForm="ngForm" fxLayout="column"  (ngSubmit)="onClicknext($event)">
         <!-- <form fxLayout="column" [formGroup]="contactForm"> -->
                 About You:
@@ -36,14 +55,14 @@
                 Please enter a valid text</p>
         </div>
 
-        <div style="margin: 50px 0 20px 0;">
+        <div style="margin: 35px 0 0px 0;">
 
         <legend> <div class="question-section"><div>
             <span style="font-family: arial, helvetica, sans-serif;">By entering your information you agree to be contacted regarding Cisco Insider and acknowledge the <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html">Cisco Privacy Statement</a>.&nbsp;</span>
             </div></div>
         </legend>
 
-        <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
+        <div class="flex-container" fxLayout="row" fxLayoutAlign="start">
             <span style="width: 300px; margin-left: 130px;"> 
                 <button mat-raised-button (click)="onClickPrev()" class="btn-back-style">	&lt;&lt; Back</button>     
             </span>
@@ -51,16 +70,13 @@
                 <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext($event)">Next >></button>   
              </span>     
         </div>
-
-        <!-- <div class="input-row" style="margin-top: 70px;">
-            <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
-        </div> -->
-
+        
         <div style="position: relative" fxLayout="row" style="margin-top: 70px;">
                 <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
-        </div> 
-        <div class="flex-container" fxLayout="row" fxLayoutAlign="start end">
-            <span style="width:800px">0%</span>
-            <span [ngStyle]="{'left': progress + '%'}">{{progress}}%</span>
-        </div> 
+            </div> 
+            <div class="flex-container progress-section" fxLayout="row" fxLayoutAlign="start end">
+                <span style="width: 800px;">0%</span>
+                <span>100%</span>
+                <!-- <span [ngStyle]="{'left': progress + '%'}">{{progress}}%</span> -->
+            </div> 
     </div>

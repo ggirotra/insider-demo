@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./comp4.component.css']
 })
 export class Comp4Component  {
+  progress = 60;
   textForm : FormGroup;
   constructor( private router: Router, private fb: FormBuilder ) {  
     this.textForm = fb.group({

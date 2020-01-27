@@ -15,6 +15,25 @@
         background-color: rgb(255, 255, 255); 
         outline: rgb(0, 0, 0) solid 0px;
     }
+  
+    .progress-section {
+        font-weight: 600;
+        padding-top: 5px;
+        color: #007ac0;
+        font-size:small;
+    }
+
+    ::ng-deep .mat-progress-bar-fill::after {
+        background-color: #007ac0 !important;
+    }
+    
+    ::ng-deep .mat-progress-bar-buffer {
+        background: #E4E8EB;
+    }
+    
+    ::ng-deep .mat-progress-bar {
+        border-radius: 2px;
+    }
     
 
 </style>   
@@ -36,8 +55,13 @@
     </div>
 
     <div class="flex-container" fxLayout="row" style="margin-top: 70px;">
-        <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
-    </div>
+            <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    </div> 
+    <div class="flex-container progress-section" fxLayout="row" fxLayoutAlign="start end">
+        <span style="width: 800px;">0%</span>
+        <span>100%</span>
+        <!-- <span [ngStyle]="{'left': progress + '%'}">{{progress}}%</span> -->
+    </div> 
 </div>
 
 

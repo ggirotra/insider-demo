@@ -11,6 +11,7 @@ import { MatRadioButton } from '@angular/material';
 export class AboutComponent implements OnInit {
 
   @ViewChild('myForm', {static:false} ) public MyForm:NgForm;
+  progress = 0;
   //@ViewChild('yesValue', {static:false} ) yesValue : MatRadioButton;
 
   formData = {
@@ -20,7 +21,16 @@ export class AboutComponent implements OnInit {
   
   constructor( private router: Router, private fb: FormBuilder ) { }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.manageProgress();
+  }
+
+  manageProgress() {
+    if(this.progress === 100) {
+      this.progress = 0;
+    } else {
+      this.progress = this.progress;
+    }
   }
 
   getSelection(){

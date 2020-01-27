@@ -1,24 +1,45 @@
-
 <style>  
-        .container{
-            margin: 15px;
-            height:60px;
-            padding: 15px;
-            border-radius: 4px;
-            background: 0 0;
-            color: #393939;
-            font-weight: 400;
-            font-size: 16px;
-            border: 2px solid rgba(0,0,0,.2);
-            border-color: #9f9f9f;
-            transition: all .3s ease-in;
-            min-height: 62px;
-        }
+    .container{
+        margin: 15px;
+        height:60px;
+        padding: 15px;
+        border-radius: 4px;
+        background: 0 0;
+        color: #393939;
+        font-weight: 400;
+        font-size: 16px;
+        border: 2px solid rgba(0,0,0,.2);
+        border-color: #9f9f9f;
+        transition: all .3s ease-in;
+        min-height: 62px;
+    }
 
-        .box-size {
-            width: 200px;
-            height:90px;
-        }
+    .box-size {
+        width: 200px;
+        height:90px;
+    }
+
+    ::ng-deep .mat-progress-bar-fill::after {
+        background-color: #007ac0 !important;
+    }
+    
+    ::ng-deep .mat-progress-bar-buffer {
+        background: #E4E8EB;
+    }
+    
+    ::ng-deep .mat-progress-bar {
+        border-radius: 2px;
+    }
+
+    .progress-section {
+        color: #007ac0;
+        font-size:small;
+        font-weight: 600;
+        padding-top: 5px;
+        margin-left: 280px; 
+        width: 50%
+    }
+
 </style>
 
 <div class="main-section-grid"
@@ -105,6 +126,11 @@
     <button mat-raised-button color="primary" (click)="onClicknext('type')" class="btn-style" >Next >></button>     
 </div>
 
-<div class="flex-container" fxLayout="row" style="margin-top: 30px; margin-left: 250px; width:50%">
-    <mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
-</div>
+<div class="flex-container" fxLayout="row" style="margin-top: 70px; margin-left: 280px; width: 50%">
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+</div> 
+<div class="flex-container progress-section" fxLayout="row" fxLayoutAlign="start end">
+    <span style="width: 800px;">0%</span>
+    <span>100%</span>
+    <!-- <span [ngStyle]="{'left': progress + '%'}">{{progress}}%</span> -->
+</div> 
