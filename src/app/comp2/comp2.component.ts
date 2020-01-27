@@ -11,13 +11,27 @@ import { Router } from '@angular/router';
   templateUrl: './comp2.component.html',
   styleUrls: ['./comp2.component.css']
 })
-export class Comp2Component {
+export class Comp2Component implements OnInit {
   radioForm : FormGroup;
+  progress = 30;
+
+  ngOnInit() {
+    //setInterval(() => this.manageProgress(), 150 )
+    this.manageProgress();
+  }
 
   constructor( private router: Router, private fb: FormBuilder ) { 
     
     this.radioForm = fb.group({
     });
+  }
+
+  manageProgress() {
+    if(this.progress === 100) {
+      this.progress = 0;
+    } else {
+      this.progress = this.progress;
+    }
   }
 
   onClicknext() {

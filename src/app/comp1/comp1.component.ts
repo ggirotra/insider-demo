@@ -12,10 +12,11 @@ export class Comp1Component implements OnInit  {
   @ViewChild('myForm',{static:false}) public MyForm: NgForm;
   @ViewChild('fname', {static:false} ) fname : MatInput;
   isSubmitted: boolean;
+  progress = 10;
 
   constructor( private router: Router ) { 
   }
-  
+
   contactFormData = {
     firstName : '',
     lastName : '',
@@ -24,6 +25,15 @@ export class Comp1Component implements OnInit  {
   };
 
   ngOnInit(){
+    this.manageProgress();
+  }
+
+  manageProgress() {
+    if(this.progress === 100) {
+      this.progress = 0;
+    } else {
+      this.progress = this.progress;
+    }
   }
 
   onClicknext(e) {
