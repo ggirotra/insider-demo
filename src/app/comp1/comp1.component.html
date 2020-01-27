@@ -1,48 +1,58 @@
+
 <div class="main-form" style="width:60%; padding: 50px 10px 2px 120px;">
-    <form fxLayout="column" [formGroup]="contactForm">
-            About You:
-        <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
-            <mat-form-field fxFlex>
-            <input matInput type="text" placeholder="FIRSTNAME" formControlName="firstName">
-            </mat-form-field>
+        <form #myForm="ngForm" fxLayout="column"  (ngSubmit)="onClicknext($event)">
+        <!-- <form fxLayout="column" [formGroup]="contactForm"> -->
+                About You:
+            <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                <mat-form-field fxFlex>
+                <input matInput placeholder="FIRSTNAME"  #fname [(ngModel)]="contactFormData.firstName"
+                    name="name" required>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-form-field fxFlex>
+                <input matInput type="text" placeholder="LASTNAME" [(ngModel)]="contactFormData.lastName"
+                name="lname" required>
+                </mat-form-field>
+            </div>
+        
+            <div class="input-row">
+                <mat-form-field fxFlex>
+                <input matInput  type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="EMAIL" [(ngModel)]="contactFormData.email"
+                name="email" required>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-form-field fxFlex>
+                <input matInput  type="text" placeholder="COMPANY" [(ngModel)]="contactFormData.company"
+                name="company">
+                </mat-form-field>
+            </div>
+        </form>
+        <div *ngIf="!myForm.valid && isSubmitted">
+            <p style="color: maroon; font-size: small;">
+                Please enter a valid text</p>
         </div>
 
-        <div class="input-row">
-            <mat-form-field fxFlex>
-            <input matInput type="text" placeholder="LASTNAME" formControlName="lastName">
-            </mat-form-field>
+        <div style="margin: 50px 0 20px 0;">
+
+        <legend> <div class="question-section"><div>
+            <span style="font-family: arial, helvetica, sans-serif;">By entering your information you agree to be contacted regarding Cisco Insider and acknowledge the <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html">Cisco Privacy Statement</a>.&nbsp;</span>
+            </div></div>
+        </legend>
+
+        <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
+            <span style="width: 300px; margin-left: 130px;"> 
+                <button mat-raised-button (click)="onClickPrev()" class="btn-back-style">	&lt;&lt; Back</button>     
+            </span>
+             <span>
+                <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext($event)">Next >></button>   
+             </span>     
         </div>
-    
-        <div class="input-row">
-            <mat-form-field fxFlex>
-            <input matInput  type="text" placeholder="EMAIL" formControlName="email">
-            </mat-form-field>
+
+        <div class="input-row" style="margin-top: 70px;">
+            <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
         </div>
-
-        <div class="input-row">
-            <mat-form-field fxFlex>
-            <input matInput  type="text" placeholder="COMPANY" formControlName="company">
-            </mat-form-field>
-        </div>
-    </form>
-
-    <div style="margin: 30px 0 10px 0;">
-
-    <legend> <div class="question-section"><div>
-        <span style="font-family: arial, helvetica, sans-serif;">By entering your information you agree to be contacted regarding Cisco Insider and acknowledge the <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html">Cisco Privacy Statement</a>.&nbsp;</span>
-        </div></div>
-    </legend>
-
-    <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
-        <span style="width: 300px; margin-left: 130px;"> 
-            <button mat-raised-button (click)="onClickPrev()" class="btn-back-style">	&lt;&lt; Back</button>     
-        </span>
-            <span>
-            <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext('type')">Next >></button>   
-            </span>     
     </div>
-
-    <div class="input-row" style="margin-top: 70px;">
-        <mat-progress-bar mode="determinate" value="15"></mat-progress-bar>
-    </div>
-</div>

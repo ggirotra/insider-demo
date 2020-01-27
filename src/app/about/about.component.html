@@ -11,27 +11,42 @@
                 Would you like to become a Cisco Insider? If so, complete your profile now. It should only take 1-2 minutes.&nbsp;
             </span></div>
         </div></legend>
-        <div class="container flex-container" fxLayout="row">
-            <span style="width: 800px">Yes, let's get started</span>
-            <span class="matradio"> <mat-radio-button ng-model="customer" color="primary" ng-value="customer"></mat-radio-button></span>
-        </div>
-        
-        <div class="container flex-container" fxLayout="row">
-            <span style="width: 800px">Not right now</span>
-            <span class="matradio"> <mat-radio-button ng-model="partner" color="primary" ng-value="partner"></mat-radio-button></span>
-        </div> 
-    
-        <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
-            <span style="width: 300px; margin-left: 130px;"> 
-                <button mat-raised-button disabled (click)="onClickPrev()" 
-                class="btn-back-style">&lt;&lt; Back</button>     
-            </span>
-                <span>
-                <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext()">
-                    Next &gt;&gt;
-                </button>   
-                </span>     
-        </div>
+        <form #myForm="ngForm" (ngSubmit)="onClicknext($event)">
+            <mat-radio-group [(ngModel)]="formData.startRadio" name="startRadio" required
+            (change)="getSelection()">
+                <div class="container flex-container" fxLayout="row">
+                    <span style="width: 800px">Yes, let's get started</span>
+                    <span class="matradio"> 
+                        <mat-radio-button #yesValue value="yes" color="primary">
+                        </mat-radio-button>
+                    </span>
+                </div>
+                
+                <div class="container flex-container" fxLayout="row">
+                    <span style="width: 800px">Not right now</span>
+                    <span class="matradio"> 
+                        <mat-radio-button value="no" color="primary">
+                        </mat-radio-button>
+                    </span>
+                </div> 
+             </mat-radio-group>  
+             <div *ngIf="!myForm.valid && isSubmitted">
+                <p style="margin: -12px 15px;color: maroon; font-size: small;">
+                    Please select a value</p>
+            </div>
+            
+            <div class="flex-container" fxLayout="row" fxLayoutAlign="start" style="margin-top:50px;">
+                <span style="width: 300px; margin-left: 130px;"> 
+                    <button mat-raised-button disabled (click)="onClickPrev()" 
+                    class="btn-back-style">&lt;&lt; Back</button>     
+                </span>
+                    <span>
+                    <button type="submit" mat-raised-button color="primary" class="btn-style" (click)="onClicknext()">
+                        Next &gt;&gt;
+                    </button>   
+                    </span>     
+            </div>
+         </form>   
     
         <div class="flex-container" fxLayout="row" style="margin-top: 70px;">
             <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>

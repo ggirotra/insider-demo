@@ -28,6 +28,7 @@ import { AboutComponent } from './about/about.component';
     AboutComponent
   ],
   imports: [
+    FormsModule,
     FlexLayoutModule,
     ReactiveFormsModule,
     BrowserModule,
