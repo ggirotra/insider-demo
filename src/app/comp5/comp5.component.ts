@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comp5',
   templateUrl: './comp5.component.html',
-  styleUrls: ['./comp5.component.css']
+  styleUrls: ['./comp5.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class Comp5Component {
 

@@ -51,7 +51,7 @@
             </div>
         </form>
         <div *ngIf="!myForm.valid && isSubmitted">
-            <p style="color: maroon; font-size: small;">
+            <p style="color: #f44336;font-size:smaller;font-weight:600">
                 Please enter a valid text</p>
         </div>
 
@@ -70,7 +70,7 @@
                 <button mat-raised-button color="primary" class="btn-style" (click)="onClicknext($event)">Next >></button>   
              </span>     
         </div>
-        
+
         <div style="position: relative" fxLayout="row" style="margin-top: 70px;">
                 <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
             </div> 
